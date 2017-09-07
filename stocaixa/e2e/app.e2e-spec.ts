@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { MaterialAngularcliPage } from './app.po';
 
-describe('stocaixa App', () => {
-  let page: AppPage;
+describe('material-angularcli App', () => {
+  let page: MaterialAngularcliPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MaterialAngularcliPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
