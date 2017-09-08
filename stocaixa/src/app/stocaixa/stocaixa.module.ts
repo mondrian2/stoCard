@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { StocaixaComponent } from './stocaixa.component';
-import { CreateComponent } from './create/create.component';
-import { BuscaComponent } from './busca/busca.component';
+import { PrintComponent } from './print/print.component';
+
 
 const routes: Routes = [{
 	path: '',
@@ -24,7 +24,7 @@ const routes: Routes = [{
     NgbModule.forRoot(),
     RouterModule.forChild(routes)
   ],
-  declarations: [StocaixaComponent, CreateComponent, BuscaComponent]
+  declarations: [StocaixaComponent, PrintComponent]
 })
 export class StocaixaModule { }
 

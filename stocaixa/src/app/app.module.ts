@@ -12,18 +12,23 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { RightSidebarComponent } from './shared/right-sidebar/rightsidebar.component';
 import { AppComponent } from './app.component';
 import { ListacartoesComponent } from './listacartoes/listacartoes.component';
+import { BuscaComponent } from "app/stocaixa/busca/busca.component";
+import { CreateComponent } from "app/stocaixa/create/create.component";
+
 
 const routes: Routes = [
   { 
     path: '',
     loadChildren: './pages/starter/starter.module#StarterModule' 
   },{ 
-    path: 'stocaixa',
-    loadChildren: './stocaixa/stocaixa.module#StocaixaModule' 
-  }
-  ,{ 
+    path: 'criarcartoes',
+    component: CreateComponent
+  },{ 
     path: 'listacartoes',
     component: ListacartoesComponent
+  },{ 
+    path: 'buscacartoes',
+    component: BuscaComponent
   },{ 
     path: 'accordion',
     loadChildren: './pages/component/accordion/accordion.module#AccordionModule' 
@@ -82,7 +87,9 @@ const routes: Routes = [
     BreadcrumbComponent,
     SidebarComponent,
     RightSidebarComponent,
-    ListacartoesComponent
+    ListacartoesComponent,
+    BuscaComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

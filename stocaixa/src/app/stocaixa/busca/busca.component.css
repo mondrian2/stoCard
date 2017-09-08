@@ -1,0 +1,13 @@
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #cartao, #cartao * {
+      visibility: visible;
+    }
+    #cartao {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+  }
