@@ -9,6 +9,9 @@ export class PedidosComponent implements OnInit {
 
   constructor() { }
 
+  value = '';
+  onEnter(value: string) { this.value = value; }
+
   ngOnInit() {
   }
 

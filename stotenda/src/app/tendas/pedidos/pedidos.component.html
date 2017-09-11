@@ -1,75 +1,270 @@
-<div class="row page-titles">
-    <div class="row col-lg-12">
-        <div class="col-lg-6 col-md-7">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">StoTenda </h3>
-                    <h6 class="card-subtitle">Cardápio</h6>
-                </div>
-                <div>
-                    <hr class="m-t-0 m-b-0">
-                </div>
-                <div class="card-body text-left ">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Cód</th>
-                                <th>Produto</th>
-                                <th>Valor</th>
-                                <th>Quant.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>Coca-Cola</td>
-                                <td>R$ 4,00</td>
-                                <td><input type="number"></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>Fanta</td>
-                                <td>R$ 4,00</td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>Sprite</td>
-                                <td>R$ 4,00</td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>Antártica</td>
-                                <td>R$ 5,00</td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>Skol</td>
-                                <td>R$ 5,00</td>
-                            </tr>
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-7">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">1029 2837 465</h2>
-                    <img src="http://www.barcodes4.me/barcode/c39/10292837465.png" alt="">
-                </div>
-                <div class="card-body">
-                    <ul>
-                      <li>5 Coca-Cola</li>
-                      <li>2 Sprits</li>
-                      <li>1 Skol</li>
-                    </ul>
-                    <h4>Total: R$ 33,00</h4>
+<div class="row page-titles col-lg-12 col-md-4">
+    
+    <div class="col-lg-4 col-md-12">
+        <div class="card">
+            <div class="card-body weather-small">
+                <div class="row">
+                    <div class="col-2 b-r align-self-right">
+                        <div class="d-flex">
+                            <div class="m-l-20">
+                                <img width="40px" src="../assets/images/barcode-scanner.svg" alt="">
+                            </div>
+                        </div>      
+                    </div>
+                    <div class="col-10 text-left">
+                       <input  class="form-control" #box (keyup.enter)="onEnter(box.value)">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+<div *ngIf = "value" class="row page-titles col-lg-12 col-md-4">
+    <div class="col-lg-6 col-md-12">
+        
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Bolinho de Bacalhau</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 5,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Alheira</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 19,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Grão de Bico com Bacalhau</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 18,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Caldo Verde</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 12,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Doces Portugueses</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 7,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body weather-small">
+                    <div class="row">
+                        <div class="col-6 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">Vinho Garrafa</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-4 b-r align-self-left">
+                            <div class="d-flex">
+                                <div class="m-l-20">
+                                    <h2 class="font-light text-info m-b-0">R$ 25,00</h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="col-2 text-left">
+                            <select class="form-control">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="col-lg-6 col-md-12">
+        <div *ngIf = "value" class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body weather-small">
+                <div class="row">
+                    <div class="col-12 align-self-right">
+                        <p>Id: {{value}}</p>
+                    </div>
+                    <br>
+                    <div class="col-lg-8 col-md-4" id="cartao">
+                        <!-- Card -->
+                        <div class="card text-left">
+                            <div class="card-body">
+                                <h1 class="card-title"><small>Pedido:</small> <strong>45 789</strong></h1>
+                                <h4 class="card-title">Barraca Portuguesa</h4>
+                                <ul>
+                                    <li>5 - Bolinho de Bacalhau - R$ 5,00</li>
+                                    <li>2 - Caldo Verde - R$ 12,00</li>
+                                    <li>2 - Alheira - R$ 19,00</li>
+                                    <li>1 - Doces Portugueses R$ 7,00</li>
+                                </ul>
+                                <h2>Total: R$ 94,00</h2>
+                                
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-success btn-rounded"><i class="fa fa-print"></i> imprimir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+
+</div>
 
